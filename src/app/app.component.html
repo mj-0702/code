@@ -1,0 +1,11 @@
+<p class="test">Decision Tree works!</p>
+
+<div *ngIf="!currentNode.result">
+  <h2>{{ currentNode.question }}</h2>
+  <button (click)="handleAnswer('yes')">Yes</button>
+  <button (click)="handleAnswer('no')">No</button>
+</div>
+<div *ngIf="currentNode.result">
+  <h2>{{ currentNode.result }}</h2>
+  <button (click)="resetTree()">Start Over</button>
+</div>
